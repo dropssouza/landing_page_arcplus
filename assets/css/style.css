@@ -1,0 +1,481 @@
+/*------------------------- GERAL ---------------------------------- */
+@import url(./global.css);
+
+body {
+  background-image: linear-gradient(00.25turn, #01346b, #001832);
+  font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+.container_principal,
+.container_planos,
+.container_sobrenos,
+.container_suporte {
+  scroll-margin-top: 80px; /* ajuste conforme a altura do seu header */
+}
+
+/*------------------------- HEADER ---------------------------------- */
+
+header {
+  position: sticky;
+  display: flex;
+  top: 0;
+  z-index: 1000; /* Garante que o header fique acima de outros elementos */
+  background-image: linear-gradient(00.25turn, #01346b, #001832);
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid white;
+  justify-content: space-around;
+}
+
+.header_container {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  height: 80px;
+  flex-wrap: wrap;
+  gap: 40vw;
+  padding: 5px;
+}
+
+#logo1 {
+  width: 150px;
+  object-fit: contain;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+.menu ul li {
+  padding: 20px 40px;
+  margin-left: 10px;
+}
+
+.menu ul li a {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.menu_toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/*------------------------- CONTAINER PRINCIPAL ---------------------------------- */
+.container_principal {
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  background-image: url('/arcplus/assets/images/fundo1.png');
+  background-position: bottom;
+  background-size: cover;
+}
+
+#provedor {
+  color: aliceblue;
+  position: relative;
+  text-align: center;
+  top: 150px;
+  width: 10em;
+}
+
+.texto_princ {
+  font-size: 400%;
+  text-shadow: 10px 5px 20px rgba(240, 248, 255, 0.149);
+  font-weight: bold;
+}
+
+.subtexto_principal {
+  color: aliceblue;
+  top: 250px;
+  font-weight: 500;
+  font-size: 200%;
+  position: relative;
+  text-align: center;
+}
+
+#seta_principal {
+  position: relative;
+  top: 350px;
+  animation: sobeDesce 2s ease-in-out infinite;
+}
+
+@keyframes sobeDesce {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(0) translateY(-10px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+.from_left {
+  opacity: 0;
+  transform: translateX(0px);
+  transition: all 0.8s ease-out;
+  will-change: transform, opacity;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/*------------------------- CONTAINER PLANOS ---------------------------------- */
+
+.container_planos {
+  background-color: #efefef;
+  height: auto;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#nossos_planos {
+  color: #000a14;
+  position: relative;
+  top: 45px;
+  text-align: center;
+}
+
+.planos,
+.suporte {
+  top: 100px;
+  position: relative;
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  width: 250px;
+  background: #f9f9f9;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+}
+
+.card button {
+  margin-top: 0.5rem;
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.card button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition-timing-function: ease;
+  filter: brightness(1.25);
+}
+
+.card_text {
+  font-weight: bold;
+  padding: 0.3rem;
+}
+
+#preco_antigo {
+  text-decoration: line-through;
+  font-size: 12px;
+}
+
+#preco_novo {
+  font-size: 1.3rem;
+}
+
+.textos_centro {
+  top: 150px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#assine_ja {
+  top: 175px;
+  max-width: 800px;
+  font-weight: 800;
+}
+
+#asterisco {
+  top: 185px;
+  font-size: x-small;
+}
+
+.from_right {
+  opacity: 0;
+  transform: translateX(0px);
+  transition: all 0.8s ease-out;
+  will-change: transform, opacity;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/*------------------------- CONTAINER SOBRE NOS ---------------------------------- */
+
+.container_sobrenos {
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  background-image: linear-gradient(00.75turn, #01346b, #001832);
+  background-image: url('/arcplus/assets/images/fundo2.png');
+  background-position: bottom;
+  background-size: cover;
+}
+
+#sobre_nos {
+  color: aliceblue;
+  position: relative;
+  text-align: center;
+  top: 45px;
+  width: 10em;
+}
+
+.subtexto_sobrenos {
+  color: aliceblue;
+  font-size: 150%;
+  position: relative;
+  text-align: center;
+  top: 80px;
+  padding: 35px;
+}
+
+/*------------------------- CONTAINER SUPORTE ---------------------------------- */
+
+.container_suporte {
+  background-color: #efefef;
+  height: 500px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.textos_suporte {
+  display: flex;
+  flex-direction: column;
+  top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+#suporte {
+  color: #000a14;
+  position: relative;
+  padding: 40px;
+}
+
+.descricao_suporte {
+  position: relative;
+  text-align: center;
+  font-size: x-large;
+  font-weight: 500;
+  padding: 5px;
+}
+
+.container_botoes_suporte {
+  display: flex;
+  top: 70px;
+  gap: 150px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.botao_suporte {
+  border: 1px solid #cfcfcf;
+  border-radius: 4px;
+  background-color: #01346b;
+  color: aliceblue;
+  font-family: 'Roboto';
+  font-size: larger;
+  font-weight: bold;
+  padding: 25px;
+  transition: 0.5s;
+}
+
+.botao_suporte:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition-timing-function: ease;
+  filter: brightness(1.25);
+}
+
+/*------------------------- FOOTER ---------------------------------- */
+footer {
+  background-image: linear-gradient(00.25turn, #01346b, #001832);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.contato_final {
+  position: relative;
+  text-align: center;
+  top: 30%;
+  height: 15%;
+}
+
+/*------------------------- ESTILOS MOBILE ---------------------------------- */
+
+@media (max-width: 1190px) {
+  .container_planos {
+    height: 800px;
+  }
+}
+
+@media (max-width: 970px) {
+  header {
+    gap: 0px;
+  }
+
+  .header_container {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .menu_toggle {
+    display: block;
+  }
+
+  .menu {
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+    background-image: linear-gradient(0.25turn, #01346b, #001832);
+    width: 100%;
+    gap: 0px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    background: transparent !important;
+    width: 100%;
+  }
+
+  .menu ul li {
+    padding: 15px 20px;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .menu.active {
+    max-height: 500px;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .texto_princ {
+    font-size: 245%;
+  }
+
+  .subtexto_principal {
+    font-size: 150%;
+    max-width: 480px;
+  }
+
+  .textos_centro {
+    font-size: 100%;
+  }
+
+  .subtexto_sobrenos {
+    font-size: 100%;
+  }
+
+  .card {
+    width: 150px;
+  }
+
+  .container_botoes_suporte {
+    gap: 10px;
+  }
+
+  .botao_suporte {
+    padding: 13px;
+  }
+}
+
+@media screen and (max-width: 387px) {
+  .texto_princ {
+    font-size: 160%;
+  }
+
+  .subtexto_principal {
+    font-size: 100%;
+  }
+
+  .subtexto_sobrenos {
+    font-size: 80%;
+  }
+
+  .descricao_suporte {
+    font-size: 120%;
+  }
+
+  .textos_centro {
+    font-size: 80%;
+  }
+
+  .card {
+    width: 100px;
+  }
+
+  #preco_novo {
+    font-size: 1rem;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .container_botoes_suporte {
+    gap: 5px;
+  }
+
+  .botao_suporte {
+    padding: 8px;
+  }
+}
