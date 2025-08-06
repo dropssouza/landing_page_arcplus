@@ -85,7 +85,7 @@ header {
   flex-direction: column;
   position: relative;
   align-items: center;
-  background-image: url('/arcplus/assets/images/fundo1.png');
+  background-image: url('../images/fundo1.png');
   background-position: bottom;
   background-size: cover;
 }
@@ -261,7 +261,7 @@ header {
   position: relative;
   align-items: center;
   background-image: linear-gradient(00.75turn, #01346b, #001832);
-  background-image: url('/arcplus/assets/images/fundo2.png');
+  background-image: url('../images/fundo2.png');
   background-position: bottom;
   background-size: cover;
 }
